@@ -1,0 +1,39 @@
+//calculator 
+#include<iostream>
+using namespace std;
+int main()
+{
+	char ch;
+	cout<<"Enter a operator among +,-,*,/ and % :"<<endl;
+	cin>>ch;
+	int a,b,c;
+	cout<<"Enter a first number which you want:"<<endl;
+	cin>>a;
+	cout<<"Enter a second number which you want :"<<endl;
+	cin>>b;
+	switch(ch)
+	{
+		case '+':
+			c=a+b;
+			break;
+			
+		case '-':
+			c=a-b;
+			break;
+			
+		case '*':
+		c=a*b;
+		break;
+		
+		case '/':
+			c=a/b;
+			break;
+		case '%':
+			c=a%b;
+			break;
+		default:
+			cout<<"invalid";
+	}
+	cout<<"................."<<endl;
+	cout<<"your result is : "<<c;
+}
