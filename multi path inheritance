@@ -1,0 +1,59 @@
+#include<iostream>
+using namespace std;
+class a
+{
+
+		public:
+		a()
+		{
+			cout<<"constructor A is involved"<<endl;
+		}		
+	
+		~a()
+		{
+			cout<<"destructor A is involved"<<endl;
+		}		
+};
+class b: public a
+{
+		public:
+		b()
+		{
+			cout<<"constructor B is involved"<<endl;
+		}		
+	
+		~b()
+		{
+			cout<<"destructor B is involved"<<endl;
+		}	
+};
+class c: public a
+{
+		public:
+		c()
+		{
+			cout<<"constructor C is involved"<<endl;
+		}		
+	
+		~c()
+		{
+			cout<<"destructor C is involved"<<endl;
+		}	
+};
+class d: public b , public c
+{
+		public:
+		d()
+		{
+			cout<<"constructor D is involved"<<endl;
+		}		
+	
+		~d()
+		{
+			cout<<"destructor D is involved"<<endl;
+		}	
+};
+int main()
+{
+	d C;
+}
