@@ -1,0 +1,36 @@
+//multilevel inheritance
+#include<iostream>
+using namespace std;
+class A
+{
+	public:
+	void showa()
+	{
+		cout<<"class A member function is involved"<<endl;
+	}
+};
+class B: public A
+{
+	public:
+		void showb()
+	{
+		cout<<"class B member function is involved"<<endl;
+	}		
+	
+};
+class C: public B
+{
+	public:
+		void showc()
+	{
+		cout<<"class C member function is involved"<<endl;
+	}		
+	
+};
+int main()
+{
+ C c;
+ c.showa();
+ c.showb();
+ c.showc();	
+}
