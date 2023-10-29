@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+string createPalindrome(string s) {
+    vector<int> charCount(26, 0);
+    for (char c : s) {
+        charCount[c - 'A']++;
+    }
+    string firstHalf = "";
+    string secondHalf = "";
+    char oddChar = '\0';
+    for (int i = 0; i < 26; i++) {
+        if (charCount[i] % 2 == 1) {
+            if (oddChar != '\0') {
+                return "NO SOLUTION";
+            }
+            oddChar = i + 'A';
+        } else {
+            for (int j = 0; j < charCount[i] / 2; j++) {
+                firstHalf += (char)(i + 'A');
+                secondHalf = (char)(i + 'A') + secondHalf;
+            }
+        }
+    }
+    
+    if (oddChar != '\0') {
+        return firstHalf + oddChar + secondHalf;
+    } else {
+        return firstHalf + secondHalf;
+    }
+}
+
+int main() {
+    string s;
+    cin >> s;
+    
+    string result = createPalindrome(s);
+    cout << result << endl;
+    
+    return 0;
+}
