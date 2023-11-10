@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+template <class t>
+void small(t a, t b, t c)
+{
+	if(a<b && a<c)
+	{
+		cout<<a<<" is minumum number"<<endl;
+	}
+	else if(b<a && b<c)
+	{
+		cout<<b<<" is minumum number"<<endl;
+	}
+	else
+	{
+		cout<<c<<" is minimum number"<<endl;
+	}
+}
+int main()
+{
+	small(10,20,30);
+	small(10.4, 9.1, 11.7);
+	small('s', 'a', 'n');
+}
