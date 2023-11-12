@@ -1,0 +1,19 @@
+//template function overloading
+#include<iostream>
+using namespace std;
+template <class T >
+void display( T x)
+{
+	cout<<"template display:"<<x<<endl;
+}
+void display(int x)
+{
+	cout<<"template int display:"<<x<<endl;
+}
+int main()
+{
+	display(20);
+	display(10.99);
+	display('S');
+	
+}
