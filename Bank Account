@@ -1,0 +1,32 @@
+//3.1)	Develop a C++ program demonstrating a Bank Account 
+//with necessary data members and member functions
+#include<iostream>
+using namespace std;
+class bank
+{
+	private:
+	string fname,lname;
+	int alc, pin;
+	public:
+	void get()
+	{
+		cout<<"enter first name:"<<endl;
+		cin>>fname;
+		cout<<"enter last name:"<<endl;
+		cin>>lname;
+		cout<<"enter alc number and pin no."<<endl;
+		cin>>alc>>pin;
+		
+		}
+		void show()
+		{
+			cout<<"first name="<<fname<<endl<<"last name="<<lname<<endl<<"alc no="<<alc<<endl<<"pin no"<<pin<<endl;
+			}	
+};
+int main()
+{
+	bank b;
+	b.get();
+	b.show();
+}
+
