@@ -1,0 +1,29 @@
+//abstract class
+#include<iostream>
+using namespace std;
+class base
+{
+	public:
+		void show()
+	{
+	cout<<"base class is involved"<<endl;
+}
+};
+class derived:public base
+{
+	public:
+	void show()
+	{
+	cout<<"derived class is involved"<<endl;
+}
+};
+int main()
+{
+	base b ,*bptr;
+	derived d ,*dptr;
+	bptr=&b;
+	bptr->show();
+	dptr=&d;
+	dptr->show();
+	
+}
