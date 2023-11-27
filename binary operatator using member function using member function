@@ -1,0 +1,29 @@
+//binary operator
+#include<iostream>
+using namespace std;
+class complex
+{
+	private:
+		int real, imaginary;
+		public:
+			void get()
+			{
+				cout<<"enter real number:"<<endl;
+				cin>>real;
+				cout<<"enter imaginary number:"<<endl;
+				cin>>imaginary;
+			}
+			void operator +(complex c2)
+			{
+				cout<<real+c2.real<<"+"<<imaginary+c2.imaginary<<"i";
+			}
+};
+int main()
+{
+
+complex c1, c2;
+c1.get();
+c2.get();
+c1+c2;
+}
+
