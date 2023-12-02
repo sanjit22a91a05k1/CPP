@@ -1,0 +1,28 @@
+//Develop a C++ Program to illustrate the use of Constructors and Destructors. 
+#include<iostream>
+using namespace std;
+class volume
+{
+	private:
+		int l,b,h;
+		public:
+			volume()
+			{
+			cout<<"enter length, breadth and height"<<endl;
+			cin>>l>>b>>h;
+		}
+		void show()
+		{
+			cout<<"volume of a box="<<l*b*h<<endl;
+		}
+		~ volume()
+		{
+			cout<<"destructor is involved"<<endl;
+		}
+};
+int main()
+{
+	volume v;
+	v.show();
+}
+
