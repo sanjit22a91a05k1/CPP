@@ -1,0 +1,14 @@
+//scope resolution
+#include<iostream>
+using namespace std;
+int a=100, b=500;
+int main()
+{
+	int a=50;
+	cout<<"local varable of a is "<<a<<endl;
+	cout<<"golbal varable of a is "<<::a<<endl;
+	cout<<"local varable of b is "<<b<<endl;
+	::a=900;
+	cout<<"global  varable of a is "<<::a<<endl;
+	
+}
