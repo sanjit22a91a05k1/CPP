@@ -1,0 +1,16 @@
+//namespace 
+#include<iostream>
+using namespace std;
+namespace one
+{
+	int a=100;
+}
+namespace two
+{
+	double a=10000.7888;
+}
+int main()
+{
+cout<<one::a<<endl;
+cout<<two::a;	
+}
