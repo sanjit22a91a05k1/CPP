@@ -1,0 +1,30 @@
+//virtual function
+#include<iostream>
+using namespace std;
+class base
+{
+	public:
+		virtual void show()
+		{
+			cout<<"base class is involved"<<endl;
+		}
+};
+class derived:public base
+{
+	public:
+		virtual void show()
+		{
+			cout<<"derived class is involved"<<endl;
+		}
+};
+int main()
+{
+	base b, *bptr;
+	derived d;
+	bptr=& b;
+	bptr->show();
+	bptr=&d;
+	bptr->show();
+}
+
+
