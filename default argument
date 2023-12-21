@@ -1,0 +1,15 @@
+//default argument 
+#include<iostream>
+using namespace std;
+int interest(int p, int t, int r=5)
+{
+	return (p*t*r)/100;
+}
+int main()
+{
+	int p,t,r;
+	cout<<"enter p,t,r"<<endl;
+	cin>>p>>t>>r;
+	cout<<interest(p,t)<<endl;
+	cout<<interest(p,t,r)<<endl;
+}
