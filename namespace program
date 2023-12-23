@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+namespace one
+{
+int a=10;
+}
+namespace two
+{
+	double a=50.999;
+}
+namespace three
+{
+	long a=59999977;
+}
+namespace four
+{
+	float a=7.8f;
+}
+int main()
+{
+	cout<<one::a<<endl;
+	cout<<two::a<<endl;
+	cout<<three::a<<endl;
+	cout<<four::a<<endl;
+	
+}
